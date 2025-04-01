@@ -1,0 +1,12 @@
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\bin\Debug\net8.0\FaturamentoService.Core.deps.json
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\bin\Debug\net8.0\FaturamentoService.Core.dll
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\bin\Debug\net8.0\FaturamentoService.Core.pdb
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\obj\Debug\net8.0\FaturamentoService.Core.csproj.AssemblyReference.cache
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\obj\Debug\net8.0\FaturamentoService.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\obj\Debug\net8.0\FaturamentoService.Core.AssemblyInfoInputs.cache
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\obj\Debug\net8.0\FaturamentoService.Core.AssemblyInfo.cs
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\obj\Debug\net8.0\FaturamentoService.Core.csproj.CoreCompileInputs.cache
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\obj\Debug\net8.0\FaturamentoService.Core.dll
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\obj\Debug\net8.0\refint\FaturamentoService.Core.dll
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\obj\Debug\net8.0\FaturamentoService.Core.pdb
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Core\obj\Debug\net8.0\ref\FaturamentoService.Core.dll

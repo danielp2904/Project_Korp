@@ -1,0 +1,143 @@
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.header-content h1 {
+  margin: 0 0 4px 0;
+  font-weight: 500;
+  color: #3f51b5;
+}
+
+.header-content p {
+  margin: 0;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.produto-card {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 24px;
+}
+
+.card-section {
+  margin-bottom: 24px;
+}
+
+.card-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0 0 16px 0;
+}
+
+.form-row {
+  margin-bottom: 16px;
+}
+
+.form-row:last-child {
+  margin-bottom: 0;
+}
+
+.form-field {
+  width: 100%;
+}
+
+.two-columns {
+  display: flex;
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .two-columns {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-actions {
+    margin-top: 16px;
+  }
+}
+
+.card-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: 16px 24px;
+  background-color: rgba(0, 0, 0, 0.02);
+  gap: 16px;
+}
+
+.status-toggle {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.toggle-label {
+  margin-right: 8px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.toggle-value {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.toggle-value.active {
+  color: #4caf50;
+}
+
+.dialog-form {
+  padding: 8px 0;
+}
+
+.dialog-section {
+  margin-bottom: 16px;
+}
+
+.dialog-section-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0 0 12px 0;
+}
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  height: 20px !important;
+}
+
+.produto-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produto-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+}
+
+button[mat-raised-button] {
+  padding: 0 20px;
+  height: 40px;
+}

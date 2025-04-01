@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\elian\\source\\repos\\FaturamentoService\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC37FAFD-9B5A-4FAD-BE51-82FAF226007C}|FaturamentoService.Infrastructure\\FaturamentoService.Infrastructure.csproj|c:\\users\\elian\\source\\repos\\faturamentoservice\\faturamentoservice.infrastructure\\persistence\\dbseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC37FAFD-9B5A-4FAD-BE51-82FAF226007C}|FaturamentoService.Infrastructure\\FaturamentoService.Infrastructure.csproj|solutionrelative:faturamentoservice.infrastructure\\persistence\\dbseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2614136-6D07-452B-9ED1-D106B60682B6}|FaturamentoService.API\\FaturamentoService.API.csproj|c:\\users\\elian\\source\\repos\\faturamentoservice\\faturamentoservice.api\\controllers\\faturamentoservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D2614136-6D07-452B-9ED1-D106B60682B6}|FaturamentoService.API\\FaturamentoService.API.csproj|solutionrelative:faturamentoservice.api\\controllers\\faturamentoservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D2614136-6D07-452B-9ED1-D106B60682B6}|FaturamentoService.API\\FaturamentoService.API.csproj|c:\\users\\elian\\source\\repos\\faturamentoservice\\faturamentoservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D2614136-6D07-452B-9ED1-D106B60682B6}|FaturamentoService.API\\FaturamentoService.API.csproj|solutionrelative:faturamentoservice.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbSeed.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\FaturamentoService\\FaturamentoService.Infrastructure\\Persistence\\DbSeed.cs",
+              "RelativeDocumentMoniker": "FaturamentoService.Infrastructure\\Persistence\\DbSeed.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\FaturamentoService\\FaturamentoService.Infrastructure\\Persistence\\DbSeed.cs",
+              "RelativeToolTip": "FaturamentoService.Infrastructure\\Persistence\\DbSeed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T19:11:10.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FaturamentoServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\FaturamentoService\\FaturamentoService.API\\Controllers\\FaturamentoServiceController.cs",
+              "RelativeDocumentMoniker": "FaturamentoService.API\\Controllers\\FaturamentoServiceController.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\FaturamentoService\\FaturamentoService.API\\Controllers\\FaturamentoServiceController.cs",
+              "RelativeToolTip": "FaturamentoService.API\\Controllers\\FaturamentoServiceController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAA7wEQAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T18:27:53.701Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\FaturamentoService\\FaturamentoService.API\\appsettings.json",
+              "RelativeDocumentMoniker": "FaturamentoService.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\FaturamentoService\\FaturamentoService.API\\appsettings.json",
+              "RelativeToolTip": "FaturamentoService.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-31T17:44:57.153Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "ContainingType": "EstoqueService.API.Controllers.EstoqueServiceController",
+    "Method": "GetAllProduct",
+    "RelativePath": "V1/product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EstoqueService.API.Controllers.EstoqueServiceController",
+    "Method": "Post",
+    "RelativePath": "V1/product",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EstoqueService.Application.InputModels.AddProductInputModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EstoqueService.API.Controllers.EstoqueServiceController",
+    "Method": "GetProductById",
+    "RelativePath": "V1/product/{idProduct}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProduct",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EstoqueService.API.Controllers.EstoqueServiceController",
+    "Method": "Put",
+    "RelativePath": "V1/product/{idProduct}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idProduct",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "model",
+        "Type": "EstoqueService.Application.InputModels.AddProductInputModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

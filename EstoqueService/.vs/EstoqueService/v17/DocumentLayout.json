@@ -1,0 +1,241 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\elian\\source\\repos\\Project_Korp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6E5A0A78-BC13-467F-B890-03DAA291A061}|Product.API\\EstoqueService.API.csproj|c:\\users\\elian\\source\\repos\\project_korp\\product.api\\controllers\\estoqueservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E5A0A78-BC13-467F-B890-03DAA291A061}|Product.API\\EstoqueService.API.csproj|solutionrelative:product.api\\controllers\\estoqueservicecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{356C860C-5AB8-472E-A312-E6DB540B6EFF}|EstoqueService.Application\\EstoqueService.Application.csproj|c:\\users\\elian\\source\\repos\\project_korp\\estoqueservice.application\\applicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{356C860C-5AB8-472E-A312-E6DB540B6EFF}|EstoqueService.Application\\EstoqueService.Application.csproj|solutionrelative:estoqueservice.application\\applicationmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6E5A0A78-BC13-467F-B890-03DAA291A061}|Product.API\\EstoqueService.API.csproj|c:\\users\\elian\\source\\repos\\project_korp\\product.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6E5A0A78-BC13-467F-B890-03DAA291A061}|Product.API\\EstoqueService.API.csproj|solutionrelative:product.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EF3EB1-AA5A-4A67-9D9D-15071B85E5A0}|EstoqueService.Infrastructure\\EstoqueService.Infrastructure.csproj|c:\\users\\elian\\source\\repos\\project_korp\\estoqueservice.infrastructure\\infrastructuremodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EF3EB1-AA5A-4A67-9D9D-15071B85E5A0}|EstoqueService.Infrastructure\\EstoqueService.Infrastructure.csproj|solutionrelative:estoqueservice.infrastructure\\infrastructuremodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EF3EB1-AA5A-4A67-9D9D-15071B85E5A0}|EstoqueService.Infrastructure\\EstoqueService.Infrastructure.csproj|c:\\users\\elian\\source\\repos\\project_korp\\estoqueservice.infrastructure\\persistence\\mongodboptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EF3EB1-AA5A-4A67-9D9D-15071B85E5A0}|EstoqueService.Infrastructure\\EstoqueService.Infrastructure.csproj|solutionrelative:estoqueservice.infrastructure\\persistence\\mongodboptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EF3EB1-AA5A-4A67-9D9D-15071B85E5A0}|EstoqueService.Infrastructure\\EstoqueService.Infrastructure.csproj|c:\\users\\elian\\source\\repos\\project_korp\\estoqueservice.infrastructure\\persistence\\dbseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EF3EB1-AA5A-4A67-9D9D-15071B85E5A0}|EstoqueService.Infrastructure\\EstoqueService.Infrastructure.csproj|solutionrelative:estoqueservice.infrastructure\\persistence\\dbseed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EF3EB1-AA5A-4A67-9D9D-15071B85E5A0}|EstoqueService.Infrastructure\\EstoqueService.Infrastructure.csproj|c:\\users\\elian\\source\\repos\\project_korp\\estoqueservice.infrastructure\\persistence\\transactions\\mongotransactionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EF3EB1-AA5A-4A67-9D9D-15071B85E5A0}|EstoqueService.Infrastructure\\EstoqueService.Infrastructure.csproj|solutionrelative:estoqueservice.infrastructure\\persistence\\transactions\\mongotransactionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EF3EB1-AA5A-4A67-9D9D-15071B85E5A0}|EstoqueService.Infrastructure\\EstoqueService.Infrastructure.csproj|c:\\users\\elian\\source\\repos\\project_korp\\estoqueservice.infrastructure\\persistence\\transactions\\itransactionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EF3EB1-AA5A-4A67-9D9D-15071B85E5A0}|EstoqueService.Infrastructure\\EstoqueService.Infrastructure.csproj|solutionrelative:estoqueservice.infrastructure\\persistence\\transactions\\itransactionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{356C860C-5AB8-472E-A312-E6DB540B6EFF}|EstoqueService.Application\\EstoqueService.Application.csproj|c:\\users\\elian\\source\\repos\\project_korp\\estoqueservice.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{356C860C-5AB8-472E-A312-E6DB540B6EFF}|EstoqueService.Application\\EstoqueService.Application.csproj|solutionrelative:estoqueservice.application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{356C860C-5AB8-472E-A312-E6DB540B6EFF}|EstoqueService.Application\\EstoqueService.Application.csproj|c:\\users\\elian\\source\\repos\\project_korp\\estoqueservice.application\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{356C860C-5AB8-472E-A312-E6DB540B6EFF}|EstoqueService.Application\\EstoqueService.Application.csproj|solutionrelative:estoqueservice.application\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{356C860C-5AB8-472E-A312-E6DB540B6EFF}|EstoqueService.Application\\EstoqueService.Application.csproj|c:\\users\\elian\\source\\repos\\project_korp\\estoqueservice.application\\viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{356C860C-5AB8-472E-A312-E6DB540B6EFF}|EstoqueService.Application\\EstoqueService.Application.csproj|solutionrelative:estoqueservice.application\\viewmodels\\productviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{356C860C-5AB8-472E-A312-E6DB540B6EFF}|EstoqueService.Application\\EstoqueService.Application.csproj|c:\\users\\elian\\source\\repos\\project_korp\\estoqueservice.application\\inputmodels\\addproductinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{356C860C-5AB8-472E-A312-E6DB540B6EFF}|EstoqueService.Application\\EstoqueService.Application.csproj|solutionrelative:estoqueservice.application\\inputmodels\\addproductinputmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EEBD15CA-881D-4899-8D6A-48E7CD32FE88}|EstoqueService\\EstoqueService.Core.csproj|c:\\users\\elian\\source\\repos\\project_korp\\estoqueservice\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EEBD15CA-881D-4899-8D6A-48E7CD32FE88}|EstoqueService\\EstoqueService.Core.csproj|solutionrelative:estoqueservice\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationModule.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Application\\ApplicationModule.cs",
+              "RelativeDocumentMoniker": "EstoqueService.Application\\ApplicationModule.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Application\\ApplicationModule.cs",
+              "RelativeToolTip": "EstoqueService.Application\\ApplicationModule.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:42:28.9Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\Product.API\\Program.cs",
+              "RelativeDocumentMoniker": "Product.API\\Program.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\Product.API\\Program.cs",
+              "RelativeToolTip": "Product.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:42:21.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "InfrastructureModule.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Infrastructure\\InfrastructureModule.cs",
+              "RelativeDocumentMoniker": "EstoqueService.Infrastructure\\InfrastructureModule.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Infrastructure\\InfrastructureModule.cs",
+              "RelativeToolTip": "EstoqueService.Infrastructure\\InfrastructureModule.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAywDcAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:41:29.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MongoDbOptions.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Infrastructure\\Persistence\\MongoDbOptions.cs",
+              "RelativeDocumentMoniker": "EstoqueService.Infrastructure\\Persistence\\MongoDbOptions.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Infrastructure\\Persistence\\MongoDbOptions.cs",
+              "RelativeToolTip": "EstoqueService.Infrastructure\\Persistence\\MongoDbOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:41:23.051Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DbSeed.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Infrastructure\\Persistence\\DbSeed.cs",
+              "RelativeDocumentMoniker": "EstoqueService.Infrastructure\\Persistence\\DbSeed.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Infrastructure\\Persistence\\DbSeed.cs",
+              "RelativeToolTip": "EstoqueService.Infrastructure\\Persistence\\DbSeed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:41:15.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MongoTransactionManager.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Infrastructure\\Persistence\\Transactions\\MongoTransactionManager.cs",
+              "RelativeDocumentMoniker": "EstoqueService.Infrastructure\\Persistence\\Transactions\\MongoTransactionManager.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Infrastructure\\Persistence\\Transactions\\MongoTransactionManager.cs",
+              "RelativeToolTip": "EstoqueService.Infrastructure\\Persistence\\Transactions\\MongoTransactionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:41:00.996Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ITransactionManager.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Infrastructure\\Persistence\\Transactions\\ITransactionManager.cs",
+              "RelativeDocumentMoniker": "EstoqueService.Infrastructure\\Persistence\\Transactions\\ITransactionManager.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Infrastructure\\Persistence\\Transactions\\ITransactionManager.cs",
+              "RelativeToolTip": "EstoqueService.Infrastructure\\Persistence\\Transactions\\ITransactionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:40:48.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EstoqueServiceController.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\Product.API\\Controllers\\EstoqueServiceController.cs",
+              "RelativeDocumentMoniker": "Product.API\\Controllers\\EstoqueServiceController.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\Product.API\\Controllers\\EstoqueServiceController.cs",
+              "RelativeToolTip": "Product.API\\Controllers\\EstoqueServiceController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEMAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:40:33.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Application\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "EstoqueService.Application\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Application\\Services\\ProductService.cs",
+              "RelativeToolTip": "EstoqueService.Application\\Services\\ProductService.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAA/wCQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:39:11.251Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Application\\Services\\IProductService.cs",
+              "RelativeDocumentMoniker": "EstoqueService.Application\\Services\\IProductService.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Application\\Services\\IProductService.cs",
+              "RelativeToolTip": "EstoqueService.Application\\Services\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:38:59.415Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProductViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Application\\ViewModels\\ProductViewModel.cs",
+              "RelativeDocumentMoniker": "EstoqueService.Application\\ViewModels\\ProductViewModel.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Application\\ViewModels\\ProductViewModel.cs",
+              "RelativeToolTip": "EstoqueService.Application\\ViewModels\\ProductViewModel.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA/wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:38:39.196Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddProductInputModel.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Application\\InputModels\\AddProductInputModel.cs",
+              "RelativeDocumentMoniker": "EstoqueService.Application\\InputModels\\AddProductInputModel.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService.Application\\InputModels\\AddProductInputModel.cs",
+              "RelativeToolTip": "EstoqueService.Application\\InputModels\\AddProductInputModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:38:09.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "EstoqueService\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\elian\\source\\repos\\Project_Korp\\EstoqueService\\Entities\\Product.cs",
+              "RelativeToolTip": "EstoqueService\\Entities\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T23:37:16.314Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

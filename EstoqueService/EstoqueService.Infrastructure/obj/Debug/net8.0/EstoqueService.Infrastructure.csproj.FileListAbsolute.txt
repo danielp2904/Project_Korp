@@ -1,0 +1,15 @@
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\bin\Debug\net8.0\EstoqueService.Infrastructure.deps.json
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\bin\Debug\net8.0\EstoqueService.Infrastructure.dll
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\bin\Debug\net8.0\EstoqueService.Infrastructure.pdb
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\bin\Debug\net8.0\EstoqueService.Core.dll
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\bin\Debug\net8.0\EstoqueService.Core.pdb
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\obj\Debug\net8.0\EstoqueService.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\obj\Debug\net8.0\EstoqueService.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\obj\Debug\net8.0\EstoqueService.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\obj\Debug\net8.0\EstoqueService.Infrastructure.AssemblyInfo.cs
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\obj\Debug\net8.0\EstoqueService.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\obj\Debug\net8.0\EstoqueS.FDFE8DDA.Up2Date
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\obj\Debug\net8.0\EstoqueService.Infrastructure.dll
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\obj\Debug\net8.0\refint\EstoqueService.Infrastructure.dll
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\obj\Debug\net8.0\EstoqueService.Infrastructure.pdb
+C:\Users\elian\source\repos\Project_Korp\EstoqueService.Infrastructure\obj\Debug\net8.0\ref\EstoqueService.Infrastructure.dll

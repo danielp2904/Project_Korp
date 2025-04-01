@@ -1,0 +1,93 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: mongodb
+    hostname: mongodb   
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    command:
+      - "--replSet"
+      - "rs0"
+      - "--bind_ip_all"
+    networks:
+      - app-network
+    healthcheck:
+      test: >
+        mongosh "mongodb://localhost:27017" --eval "db.adminCommand({ ping: 1 }).ok" --quiet
+      interval: 10s
+      timeout: 10s
+      retries: 5
+
+  mongo-init-replica:
+    image: mongo:6.0
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    volumes:
+      - mongo-init:/data/db
+    entrypoint: >
+      sh -c "
+        until mongosh --host mongodb --eval 'db.adminCommand({ ping: 1 }).ok' --quiet; do sleep 5; done;
+        mongosh --host mongodb --eval '
+          try {
+            rs.initiate({_id: \"rs0\", members: [{_id: 0, host: \"mongodb:27017\"}]});
+          } catch (e) {
+            if (e.codeName === \"AlreadyInitialized\") {
+              cfg = rs.conf();
+              cfg.members = [{_id: 0, host: \"mongodb:27017\"}];
+              rs.reconfig(cfg, {force: true});
+            } else {
+              throw e;
+            }
+          }';
+        touch /data/db/init.lock;
+      "
+    networks:
+      - app-network
+
+  faturamentoservice.api:
+    build:
+      context: .
+      dockerfile: FaturamentoService.API/Dockerfile
+    container_name: faturamentoservice-api
+    ports:
+      - "5000:80"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      mongo-init-replica:
+        condition: service_completed_successfully
+    networks:
+      - app-network
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+  estoqueservice.api:
+    build:
+      context: ../Project_Korp
+      dockerfile: Product.API/Dockerfile
+    container_name: estoque-api
+    ports:
+      - "5001:80"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+      mongo-init-replica:
+        condition: service_completed_successfully
+    networks:
+      - app-network
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: http://+:80
+
+
+volumes:
+  mongo-data:
+  mongo-init:
+
+networks:
+  app-network:

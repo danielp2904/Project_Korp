@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "xCkfyzmpxP11rIDsV1Vr+QyqOjSQcrYcutwG6Sk7k2I=",
+  "Source": "FaturamentoService.API",
+  "BasePath": "_content/FaturamentoService.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

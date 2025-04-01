@@ -1,0 +1,15 @@
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\obj\Debug\net8.0\FaturamentoService.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\obj\Debug\net8.0\FaturamentoService.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\obj\Debug\net8.0\FaturamentoService.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\obj\Debug\net8.0\FaturamentoService.Infrastructure.AssemblyInfo.cs
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\obj\Debug\net8.0\FaturamentoService.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\bin\Debug\net8.0\FaturamentoService.Infrastructure.deps.json
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\bin\Debug\net8.0\FaturamentoService.Infrastructure.dll
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\bin\Debug\net8.0\FaturamentoService.Infrastructure.pdb
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\bin\Debug\net8.0\FaturamentoService.Core.dll
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\bin\Debug\net8.0\FaturamentoService.Core.pdb
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\obj\Debug\net8.0\Faturame.EEFD3BB6.Up2Date
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\obj\Debug\net8.0\FaturamentoService.Infrastructure.dll
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\obj\Debug\net8.0\refint\FaturamentoService.Infrastructure.dll
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\obj\Debug\net8.0\FaturamentoService.Infrastructure.pdb
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Infrastructure\obj\Debug\net8.0\ref\FaturamentoService.Infrastructure.dll

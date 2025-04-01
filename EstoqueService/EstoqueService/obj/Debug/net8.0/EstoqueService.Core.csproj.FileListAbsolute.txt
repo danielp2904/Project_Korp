@@ -1,0 +1,12 @@
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\bin\Debug\net8.0\EstoqueService.Core.deps.json
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\bin\Debug\net8.0\EstoqueService.Core.dll
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\bin\Debug\net8.0\EstoqueService.Core.pdb
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\obj\Debug\net8.0\EstoqueService.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\obj\Debug\net8.0\EstoqueService.Core.AssemblyInfoInputs.cache
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\obj\Debug\net8.0\EstoqueService.Core.AssemblyInfo.cs
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\obj\Debug\net8.0\EstoqueService.Core.csproj.CoreCompileInputs.cache
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\obj\Debug\net8.0\EstoqueService.Core.dll
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\obj\Debug\net8.0\refint\EstoqueService.Core.dll
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\obj\Debug\net8.0\EstoqueService.Core.pdb
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\obj\Debug\net8.0\ref\EstoqueService.Core.dll
+C:\Users\elian\source\repos\Project_Korp\EstoqueService\obj\Debug\net8.0\EstoqueService.Core.csproj.AssemblyReference.cache

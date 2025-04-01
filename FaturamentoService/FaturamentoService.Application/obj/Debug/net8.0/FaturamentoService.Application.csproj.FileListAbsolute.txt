@@ -1,0 +1,15 @@
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\bin\Debug\net8.0\FaturamentoService.Application.deps.json
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\bin\Debug\net8.0\FaturamentoService.Application.dll
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\bin\Debug\net8.0\FaturamentoService.Application.pdb
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\bin\Debug\net8.0\FaturamentoService.Core.dll
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\bin\Debug\net8.0\FaturamentoService.Core.pdb
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\obj\Debug\net8.0\FaturamentoService.Application.csproj.AssemblyReference.cache
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\obj\Debug\net8.0\FaturamentoService.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\obj\Debug\net8.0\FaturamentoService.Application.AssemblyInfoInputs.cache
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\obj\Debug\net8.0\FaturamentoService.Application.AssemblyInfo.cs
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\obj\Debug\net8.0\FaturamentoService.Application.csproj.CoreCompileInputs.cache
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\obj\Debug\net8.0\Faturame.99ED355B.Up2Date
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\obj\Debug\net8.0\FaturamentoService.Application.dll
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\obj\Debug\net8.0\refint\FaturamentoService.Application.dll
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\obj\Debug\net8.0\FaturamentoService.Application.pdb
+C:\Users\elian\source\repos\FaturamentoService\FaturamentoService.Application\obj\Debug\net8.0\ref\FaturamentoService.Application.dll

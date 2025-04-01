@@ -1,0 +1,516 @@
+<ng-container *ngIf="!isDialog">
+  <div class="page-header">
+    <div class="header-content">
+      <h1 class="mat-h1">{{ title }}</h1>
+      <p class="mat-subtitle-1">Selecione os produtos para a nota fiscal</p>
+    </div>
+    <div class="header-actions">
+      <button mat-stroked-button routerLink="/nota">
+        <mat-icon>list</mat-icon>
+        Listar Notas
+      </button>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <mat-card class="nota-card">
+      <mat-progress-bar
+        *ngIf="isLoading"
+        mode="indeterminate"
+        color="accent"
+      ></mat-progress-bar>
+
+      <form [formGroup]="notaForm" (ngSubmit)="onSubmit()">
+        <div class="card-content">
+          <div class="card-section">
+            <h2 class="section-title">Informações Básicas</h2>
+
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Data Emissão</mat-label>
+                <input
+                  matInput
+                  [readonly]="true"
+                  [disabled]="isLoading"
+                  [value]="
+                    notaForm.get('dataEmissao')?.value | date : 'dd/MM/yyyy'
+                  "
+                />
+              </mat-form-field>
+            </div>
+
+            <div class="form-row">
+              <mat-slide-toggle
+                color="primary"
+                [disabled]="isLoading"
+                formControlName="processada"
+                class="status-toggle"
+              >
+                <span class="toggle-label">Nota Processada:</span>
+                <span
+                  class="toggle-value"
+                  [class.processed]="notaForm.get('processada')?.value"
+                >
+                  {{ notaForm.get("processada")?.value ? "Sim" : "Não" }}
+                </span>
+              </mat-slide-toggle>
+            </div>
+
+            <div class="form-row">
+              <mat-slide-toggle
+                color="primary"
+                [disabled]="isLoading"
+                formControlName="status"
+                class="status-toggle"
+              >
+                <span class="toggle-label">Status:</span>
+                <span
+                  class="toggle-value"
+                  [class.active]="notaForm.get('status')?.value === 1"
+                >
+                  {{
+                    notaForm.get("status")?.value === 1 ? "Aberta" : "Fechada"
+                  }}
+                </span>
+              </mat-slide-toggle>
+            </div>
+          </div>
+
+          <mat-divider></mat-divider>
+
+          <div class="card-section">
+            <h2 class="section-title">Selecione os Produtos</h2>
+
+            <div class="table-container">
+              <div class="table-header">
+                <mat-form-field appearance="outline">
+                  <mat-label>Filtrar Produtos</mat-label>
+                  <input
+                    matInput
+                    (keyup)="applyFilter($event)"
+                    placeholder="Buscar..."
+                  />
+                  <mat-icon matSuffix>search</mat-icon>
+                </mat-form-field>
+              </div>
+
+              <table
+                mat-table
+                [dataSource]="dataSource"
+                matSort
+                class="produtos-table"
+              >
+                <ng-container matColumnDef="select">
+                  <th mat-header-cell *matHeaderCellDef>Selecionar</th>
+                  <td mat-cell *matCellDef="let produto">
+                    <mat-checkbox
+                      [checked]="isSelected(produto.productId || '')"
+                      (change)="toggleProdutoSelection(produto)"
+                      [disabled]="isLoading"
+                    >
+                    </mat-checkbox>
+                  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                    Nome
+                  </th>
+                  <td mat-cell *matCellDef="let produto">
+                    <div class="produto-name">
+                      <mat-icon class="produto-icon">inventory_2</mat-icon>
+                      <span>{{ produto.name }}</span>
+                    </div>
+                  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="unitPrice">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                    Valor Unitário
+                  </th>
+                  <td mat-cell *matCellDef="let produto">
+                    <span class="price-value">{{
+                      formatCurrency(produto.unitPrice)
+                    }}</span>
+                  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="quantity">
+                  <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                    Estoque
+                  </th>
+                  <td mat-cell *matCellDef="let produto">
+                    <span
+                      class="stock-badge"
+                      [ngClass]="{
+                        'low-stock': produto.quantity < 10,
+                        'out-of-stock': produto.quantity <= 0
+                      }"
+                      [matTooltip]="
+                        produto.quantity <= 0 ? 'Sem estoque disponível' : ''
+                      "
+                    >
+                      {{ produto.quantity }}
+                    </span>
+                  </td>
+                </ng-container>
+                <tr
+                  mat-header-row
+                  *matHeaderRowDef="displayedColumns; sticky: true"
+                ></tr>
+
+                <tr
+                  mat-row
+                  *matRowDef="let row; columns: displayedColumns"
+                  [ngClass]="{ 'selected-row': isSelected(row.productId) }"
+                  (click)="toggleProdutoSelection(row)"
+                ></tr>
+
+                <tr class="mat-row" *matNoDataRow>
+                  <td
+                    class="mat-cell no-data-cell"
+                    [attr.colspan]="displayedColumns.length"
+                  >
+                    <div *ngIf="isLoading" class="loading-placeholder">
+                      <mat-spinner diameter="30"></mat-spinner>
+                      <span>Carregando produtos...</span>
+                    </div>
+                    <div *ngIf="!isLoading" class="no-data-message">
+                      Nenhum produto encontrado
+                    </div>
+                  </td>
+                </tr>
+              </table>
+
+              <mat-paginator
+                [pageSizeOptions]="[5, 10, 25, 50]"
+                showFirstLastButtons
+              ></mat-paginator>
+            </div>
+
+            <div class="selected-products" *ngIf="selectedProdutos.size > 0">
+              <h3 class="subsection-title">
+                Produtos Selecionados ({{ selectedProdutos.size }})
+              </h3>
+
+              <div class="selected-products-list">
+                <div
+                  class="selected-product-item"
+                  *ngFor="let item of getSelectedProdutosArray(); let i = index"
+                >
+                  <div class="item-details">
+                    <div>
+                      <span class="item-name"> Produto:{{ item.nome }}</span>
+                    </div>
+                    <span class="item-price">Valor: {{
+                      formatCurrency(item.valorTotal)
+                    }}</span>
+                    <span class="item-available-stock" *ngIf="item.idProduto">
+                      (Disponível: {{ getAvailableStock(item.idProduto) }})
+                    </span>
+                  </div>
+
+                  <div class="item-quantity">
+                    <button
+                      mat-icon-button
+                      type="button"
+                      [disabled]="item.quantidade <= 1 || isLoading"
+                      (click)="
+                        updateItemQuantity(item.idProduto!, item.quantidade - 1)
+                      "
+                    >
+                      <mat-icon>remove</mat-icon>
+                    </button>
+
+                    <span class="quantity-value">{{ item.quantidade }}</span>
+
+                    <button
+                      mat-icon-button
+                      type="button"
+                      [disabled]="
+                        isLoading ||
+                        (item.idProduto &&
+                          !hasEnoughStock(item.idProduto, item.quantidade + 1))
+                      "
+                      (click)="
+                        updateItemQuantity(item.idProduto!, item.quantidade + 1)
+                      "
+                      [matTooltip]="
+                        item.idProduto &&
+                        !hasEnoughStock(item.idProduto, item.quantidade + 1)
+                          ? 'Estoque insuficiente'
+                          : ''
+                      "
+                    >
+                      <mat-icon>add</mat-icon>
+                    </button>
+                  </div>
+
+                  <div class="item-total">
+                    {{ formatCurrency(calculateItemTotal(item)) }}
+                  </div>
+
+                  <button
+                    mat-icon-button
+                    type="button"
+                    color="warn"
+                    [disabled]="isLoading"
+                    (click)="
+                      toggleProdutoSelection({
+                        productId: item.idProduto,
+                        name: item.nome,
+                        unitPrice: item.valorTotal,
+                        quantity: 0,
+                        active: true
+                      })
+                    "
+                  >
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </div>
+
+                <div class="nota-total">
+                  <span class="total-label">Total da Nota:</span>
+                  <span class="total-value">{{
+                    formatCurrency(calculateTotal())
+                  }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="card-actions">
+          <button
+            mat-button
+            type="button"
+            [disabled]="isLoading"
+            (click)="onCancel()"
+          >
+            <mat-icon>arrow_back</mat-icon>
+            Voltar
+          </button>
+
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="isLoading || selectedProdutos.size === 0"
+          >
+            <mat-icon *ngIf="!isLoading">save</mat-icon>
+            <mat-icon *ngIf="isLoading">hourglass_empty</mat-icon>
+            {{ isLoading ? "Salvando..." : "Salvar Nota" }}
+          </button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="isDialog">
+  <h2 mat-dialog-title>{{ title }}</h2>
+
+  <div mat-dialog-content>
+    <mat-progress-bar *ngIf="isLoading" mode="indeterminate" color="accent">
+    </mat-progress-bar>
+
+    <form [formGroup]="notaForm" (ngSubmit)="onSubmit()" class="dialog-form">
+      <div class="dialog-section">
+        <h3 class="dialog-section-title">Selecione os Produtos</h3>
+
+        <div class="table-container">
+          <table
+            mat-table
+            [dataSource]="dataSource"
+            matSort
+            class="produtos-table"
+          >
+            <ng-container matColumnDef="select">
+              <th mat-header-cell *matHeaderCellDef>Selecionar</th>
+              <td mat-cell *matCellDef="let produto">
+                <mat-checkbox
+                  [checked]="isSelected(produto.productId)"
+                  (click)="$event.stopPropagation()"
+                  (click)="
+                    $event.stopPropagation(); toggleProdutoSelection(produto)
+                  "
+                  [disabled]="isLoading"
+                >
+                </mat-checkbox>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Nome</th>
+              <td mat-cell *matCellDef="let produto">
+                <div class="produto-name">
+                  <span>{{ produto.name }}</span>
+                </div>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="unitPrice">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>
+                Valor Unitário
+              </th>
+              <td mat-cell *matCellDef="let produto">
+                <span class="price-value">{{
+                  formatCurrency(produto.unitPrice)
+                }}</span>
+              </td>
+            </ng-container>
+
+            <ng-container matColumnDef="quantity">
+              <th mat-header-cell *matHeaderCellDef mat-sort-header>Estoque</th>
+              <td mat-cell *matCellDef="let produto">
+                <span
+                  class="stock-badge"
+                  [ngClass]="{
+                    'low-stock': produto.quantity < 10,
+                    'out-of-stock': produto.quantity <= 0
+                  }"
+                  [matTooltip]="
+                    produto.quantity <= 0 ? 'Sem estoque disponível' : ''
+                  "
+                >
+                  {{ produto.quantity }}
+                </span>
+              </td>
+            </ng-container>
+
+            <tr
+              mat-header-row
+              *matHeaderRowDef="displayedColumns; sticky: true"
+            ></tr>
+
+            <tr
+              mat-row
+              *matRowDef="let row; columns: displayedColumns"
+              [ngClass]="{ 'selected-row': isSelected(row.productId || '') }"
+              (click)="toggleProdutoSelection(row)"
+            ></tr>
+
+            <tr class="mat-row" *matNoDataRow>
+              <td
+                class="mat-cell no-data-cell"
+                [attr.colspan]="displayedColumns.length"
+              >
+                <div *ngIf="isLoading" class="loading-placeholder">
+                  <mat-spinner diameter="30"></mat-spinner>
+                  <span>Carregando produtos...</span>
+                </div>
+                <div *ngIf="!isLoading" class="no-data-message">
+                  Nenhum produto encontrado
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <mat-paginator
+            [pageSizeOptions]="[5, 10, 25]"
+            showFirstLastButtons
+          ></mat-paginator>
+        </div>
+      </div>
+
+      <div class="dialog-section" *ngIf="selectedProdutos.size > 0">
+        <h3 class="subsection-title">
+          Produtos Selecionados ({{ selectedProdutos.size }})
+        </h3>
+
+        <div class="selected-products-list">
+          <div
+            class="selected-product-item"
+            *ngFor="let item of getSelectedProdutosArray(); let i = index"
+          >
+            <div class="item-details">
+              <div>
+                <span class="item-name">Produto: {{ item.nome }}</span>
+              </div>
+              <span class="item-price">Valor: {{ formatCurrency(item.valorTotal) }}</span>
+              <span class="item-available-stock" *ngIf="item.idProduto">
+                (Disponível: {{ getAvailableStock(item.idProduto) }})
+              </span>
+            </div>
+
+            <div class="item-quantity">
+              <button
+                mat-icon-button
+                type="button"
+                [disabled]="item.quantidade <= 1 || isLoading"
+                (click)="
+                  updateItemQuantity(item.idProduto!, item.quantidade - 1)
+                "
+              >
+                <mat-icon>remove</mat-icon>
+              </button>
+
+              <span class="quantity-value">{{ item.quantidade }}</span>
+
+              <button
+                mat-icon-button
+                type="button"
+                [disabled]="
+                  isLoading ||
+                  (item.idProduto &&
+                    !hasEnoughStock(item.idProduto, item.quantidade + 1))
+                "
+                (click)="
+                  updateItemQuantity(item.idProduto!, item.quantidade + 1)
+                "
+                [matTooltip]="
+                  item.idProduto &&
+                  !hasEnoughStock(item.idProduto, item.quantidade + 1)
+                    ? 'Estoque insuficiente'
+                    : ''
+                "
+              >
+                <mat-icon>add</mat-icon>
+              </button>
+            </div>
+
+            <div class="item-total">
+              {{ formatCurrency(calculateItemTotal(item)) }}
+            </div>
+
+            <button
+              mat-icon-button
+              type="button"
+              color="warn"
+              [disabled]="isLoading"
+              (click)="
+                toggleProdutoSelection({
+                  productId: item.idProduto,
+                  name: item.nome,
+                  unitPrice: item.valorTotal,
+                  quantity: 0,
+                  active: true
+                })
+              "
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button [disabled]="isLoading" (click)="onCancel()">
+      Cancelar
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="isLoading || selectedProdutos.size === 0"
+      (click)="onSubmit()"
+    >
+      <mat-icon *ngIf="!isLoading">save</mat-icon>
+      <mat-icon *ngIf="isLoading">hourglass_empty</mat-icon>
+      {{ isLoading ? "Salvando..." : isEditing ? "Atualizar" : "Salvar" }}
+    </button>
+  </div>
+</ng-container>

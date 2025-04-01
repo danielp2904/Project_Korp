@@ -1,0 +1,65 @@
+[
+  {
+    "ContainingType": "FaturamentoService.API.Controllers.FaturamentoServiceController",
+    "Method": "Post",
+    "RelativePath": "V1/notas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nota",
+        "Type": "FaturamentoService.Application.InputModels.AddNotaInputModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FaturamentoService.API.Controllers.FaturamentoServiceController",
+    "Method": "GetAllProduct",
+    "RelativePath": "V1/notas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FaturamentoService.API.Controllers.FaturamentoServiceController",
+    "Method": "GetByIdAsync",
+    "RelativePath": "V1/notas/{idNota}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idNota",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FaturamentoService.API.Controllers.FaturamentoServiceController",
+    "Method": "Put",
+    "RelativePath": "V1/notas/{idNota}/{processar}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "idNota",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "processar",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

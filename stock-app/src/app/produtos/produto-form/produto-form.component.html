@@ -1,0 +1,305 @@
+<ng-container *ngIf="!isDialog">
+  <div class="page-header">
+    <div class="header-content">
+      <h1 class="mat-h1">{{ title }}</h1>
+      <p class="mat-subtitle-1">
+        Preencha as informações do produto para cadastrá-lo no sistema
+      </p>
+    </div>
+    <div class="header-actions">
+      <button mat-stroked-button routerLink="/produtos">
+        <mat-icon>list</mat-icon>
+        Listar Produtos
+      </button>
+    </div>
+  </div>
+
+  <div class="card-container">
+    <mat-card class="produto-card">
+      <mat-progress-bar
+        *ngIf="isLoading"
+        mode="indeterminate"
+        color="accent"
+      ></mat-progress-bar>
+
+      <form [formGroup]="produtoForm" (ngSubmit)="onSubmit()">
+        <div class="card-content">
+          <div class="card-section">
+            <h2 class="section-title">Informações Básicas</h2>
+
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Nome do Produto</mat-label>
+                <input
+                  matInput
+                  formControlName="name"
+                  placeholder="Digite o nome do produto"
+                  autocomplete="off"
+                  [disabled]="isLoading"
+                />
+                <mat-icon matSuffix>inventory</mat-icon>
+                <mat-hint>Insira um nome descritivo para o produto</mat-hint>
+                <mat-error
+                  *ngIf="produtoForm.get('name')?.hasError('required')"
+                >
+                  Nome é obrigatório
+                </mat-error>
+                <mat-error
+                  *ngIf="produtoForm.get('name')?.hasError('maxlength')"
+                >
+                  Nome não pode exceder 100 caracteres
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="form-row">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Descrição</mat-label>
+                <textarea
+                  matInput
+                  formControlName="description"
+                  placeholder="Descreva as características do produto"
+                  rows="3"
+                  [disabled]="isLoading"
+                >
+                </textarea>
+                <mat-hint align="end"
+                  >{{
+                    produtoForm.get("description")?.value?.length || 0
+                  }}/500</mat-hint
+                >
+                <mat-error
+                  *ngIf="produtoForm.get('description')?.hasError('maxlength')"
+                >
+                  Descrição não pode exceder 500 caracteres
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+
+          <mat-divider></mat-divider>
+
+          <div class="card-section">
+            <h2 class="section-title">Informações de Preço e Estoque</h2>
+
+            <div class="form-row two-columns">
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Preço Unitário</mat-label>
+                <input
+                  matInput
+                  type="number"
+                  formControlName="unitPrice"
+                  placeholder="0.00"
+                  step="0.01"
+                  min="0"
+                  [disabled]="isLoading"
+                />
+                <span matPrefix>R$&nbsp;</span>
+                <mat-icon matSuffix>monetization_on</mat-icon>
+                <mat-error
+                  *ngIf="produtoForm.get('unitPrice')?.hasError('required')"
+                >
+                  Preço é obrigatório
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field appearance="outline" class="form-field">
+                <mat-label>Quantidade em Estoque</mat-label>
+                <input
+                  matInput
+                  type="number"
+                  formControlName="quantity"
+                  placeholder="0"
+                  step="1"
+                  min="0"
+                  [disabled]="isLoading"
+                />
+                <mat-icon matSuffix>inventory_2</mat-icon>
+                <mat-error
+                  *ngIf="produtoForm.get('quantity')?.hasError('required')"
+                >
+                  Quantidade é obrigatória
+                </mat-error>
+                <mat-error *ngIf="produtoForm.get('quantity')?.hasError('min')">
+                  Quantidade deve ser maior ou igual a zero
+                </mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="form-row">
+              <mat-slide-toggle
+                formControlName="active"
+                color="primary"
+                [disabled]="isLoading"
+                class="status-toggle"
+              >
+                <span class="toggle-label">Status do Produto:</span>
+                <span
+                  class="toggle-value"
+                  [class.active]="produtoForm.get('active')?.value"
+                >
+                  {{ produtoForm.get("active")?.value ? "Ativo" : "Inativo" }}
+                </span>
+              </mat-slide-toggle>
+            </div>
+          </div>
+        </div>
+
+        <mat-divider></mat-divider>
+
+        <div class="card-actions">
+          <button
+            mat-button
+            type="button"
+            [disabled]="isLoading"
+            (click)="onCancel()"
+          >
+            <mat-icon>arrow_back</mat-icon>
+            Voltar
+          </button>
+
+          <button
+            mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="(submitAttempted && produtoForm.invalid) || isLoading"
+          >
+            <mat-icon *ngIf="!isLoading">save</mat-icon>
+            <mat-icon *ngIf="isLoading">hourglass_empty</mat-icon>
+            {{ isLoading ? "Salvando..." : "Salvar Produto" }}
+          </button>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="isDialog">
+  <h2 mat-dialog-title>{{ title }}</h2>
+
+  <div mat-dialog-content>
+    <mat-progress-bar
+      *ngIf="isLoading"
+      mode="indeterminate"
+      color="accent"
+    ></mat-progress-bar>
+
+    <form [formGroup]="produtoForm" (ngSubmit)="onSubmit()" class="dialog-form">
+      <div class="dialog-section">
+        <h3 class="dialog-section-title">Informações Básicas</h3>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Nome do Produto</mat-label>
+            <input
+              matInput
+              formControlName="name"
+              placeholder="Digite o nome do produto"
+              autocomplete="off"
+              [disabled]="isLoading"
+            />
+            <mat-icon matSuffix>inventory</mat-icon>
+            <mat-error *ngIf="produtoForm.get('name')?.hasError('required')">
+              Nome é obrigatório
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Descrição</mat-label>
+            <textarea
+              matInput
+              formControlName="description"
+              placeholder="Descreva as características do produto"
+              rows="2"
+              [disabled]="isLoading"
+            >
+            </textarea>
+            <mat-hint align="end"
+              >{{
+                produtoForm.get("description")?.value?.length || 0
+              }}/500</mat-hint
+            >
+          </mat-form-field>
+        </div>
+      </div>
+
+      <div class="dialog-section">
+        <h3 class="dialog-section-title">Informações de Preço e Estoque</h3>
+
+        <div class="form-row two-columns">
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Preço Unitário</mat-label>
+            <input
+              matInput
+              type="number"
+              formControlName="unitPrice"
+              placeholder="0.00"
+              step="0.01"
+              min="0"
+              [disabled]="isLoading"
+            />
+            <span matPrefix>R$&nbsp;</span>
+            <mat-error
+              *ngIf="produtoForm.get('unitPrice')?.hasError('required')"
+            >
+              Preço é obrigatório
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="form-field">
+            <mat-label>Quantidade</mat-label>
+            <input
+              matInput
+              type="number"
+              formControlName="quantity"
+              placeholder="0"
+              step="1"
+              min="0"
+              [disabled]="isLoading"
+            />
+            <mat-error
+              *ngIf="produtoForm.get('quantity')?.hasError('required')"
+            >
+              Quantidade é obrigatória
+            </mat-error>
+          </mat-form-field>
+        </div>
+
+        <div class="form-row">
+          <mat-slide-toggle
+            formControlName="active"
+            color="primary"
+            [disabled]="isLoading"
+            class="status-toggle"
+          >
+            <span class="toggle-label">Status do Produto:</span>
+            <span
+              class="toggle-value"
+              [class.active]="produtoForm.get('active')?.value"
+            >
+              {{ produtoForm.get("active")?.value ? "Ativo" : "Inativo" }}
+            </span>
+          </mat-slide-toggle>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button [disabled]="isLoading" (click)="onCancel()">
+      Cancelar
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      [disabled]="(submitAttempted && produtoForm.invalid) || isLoading"
+      (click)="onSubmit()"
+    >
+      <mat-icon *ngIf="!isLoading">save</mat-icon>
+      <mat-icon *ngIf="isLoading">hourglass_empty</mat-icon>
+      {{ isLoading ? "Salvando..." : isEditing ? "Atualizar" : "Salvar" }}
+    </button>
+  </div>
+</ng-container>
